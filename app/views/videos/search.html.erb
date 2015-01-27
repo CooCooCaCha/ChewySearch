@@ -1,0 +1,36 @@
+<header>
+    <a href="/" class="logo">
+	    <div>Chewy&#8712;Search<div style="margin-top: -3px; font-size: 12px; font-style: italic;">Help us, help you search!</div></div>
+    </a>
+    <a href="/logout" class="header-function-button">Logout</a>
+    <a href="/upload" class="header-function-button">Upload</a>
+    <div style="height: 65px; overflow: hidden;">
+        <div style="margin: 10px; height: 45px;">
+            <!--<div class="search-button">
+                <div>Find Videos</div>
+            </div>
+            -->
+            <div style="overflow: hidden; height: 45px;" >
+                <form action="videos" method="get">
+                <input name="q" type="text" autocomplete="off" placeholder="power search" style="border-width: 0px; height: 45px; width: 100%; font-size: 20px; outline: none; padding-left: 15px; line-height: 20px;" value="<%= @q %>">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content">
+    <% @videos.each do |video| %>
+        <a id="video_<%= video.id %>" href="videos/<%= video.id %>" class="video-container">
+            <div style="background-color: #333; height: 242px;"></div>
+            <div class="video-info">
+                <div class="video-title"><%= video.title %></div>
+                <div style="color: #eee; margin-top: 15px; text-align: center;">
+                    <div style="float: left; display: inline-block; width: 50%;">Views: 500 Million</div>
+                    <div style="display: inline-block; width: 50%;">Rating: 100%</div>
+                </div>
+            </div>
+        </a>
+    <% end %>
+    <div style="height: 10px"></div>
+</div>

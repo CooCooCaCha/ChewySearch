@@ -1,0 +1,5 @@
+<%= form_tag( "/videos", method: "post" ) do %>
+	<%= label_tag( :title, "Upload Video:" ) %>
+	<%= text_field_tag( :title ) %>
+	<%= submit_tag( "Upload" ) %>
+<% end %>

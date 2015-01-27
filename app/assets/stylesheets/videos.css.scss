@@ -1,0 +1,171 @@
+// Place all the styles related to the grid controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-color: #2E8FCC;
+$highlight-color: #FF5354;
+
+body {
+    margin: 0px;
+    padding: 0px;
+    //background-image: linear-gradient( $primary-color, darken( $primary-color, 25% ) )
+    background-color: #e5e5e5;
+}
+
+header {
+    background-color: #e5e5e5;
+    color: #bbb;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 4px 4px -2px #222;
+}
+
+.sort-container {
+    display: inline-block;
+    float: left;
+    -webkit-padding-start: 0px;
+    margin: 0px;
+
+    li {
+        display: inline-block;
+        color: white;
+        background-image: linear-gradient( darken( $primary-color, 10% ), darken( $primary-color, 15% ));
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 84px;
+        text-align: center;
+        height: 25px;
+        cursor: pointer;
+        line-height: 24px;
+
+        &.selected {
+            background-image: linear-gradient( $highlight-color, darken( $highlight-color, 25% ) );
+        }
+    }
+}
+
+.header-function-button {
+    padding-top: 20px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    background-color: #444; 
+    height: 45px; 
+    float: right;
+    text-decoration: inherit;
+    color: #ddd;
+}
+
+.logo {
+    float: left; 
+    width: 200px; 
+    height: 65px; 
+    background-color: $highlight-color;
+    color: #eee; 
+    text-decoration: none;
+
+    div {
+        font-size: 30px; 
+        margin-left: 22px; 
+        margin-top: 7px; 
+    }
+}
+
+.search-button {
+    float: right; 
+    height: 45px; 
+    background-color: $primary-color; 
+    color: #eee; 
+    margin-left: 10px; 
+    border-radius: 3px;
+
+    div {
+        margin-left: 20px; 
+        margin-right: 20px; 
+        margin-top: 12px;
+    }
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.content {
+    overflow: hidden;
+    padding-top: 85px;
+    margin: 0 auto;
+    width: 1836px;
+
+    @media (max-width: 1852px) {
+        width: 1376px;
+    }    
+
+    @media (max-width: 1393px) {
+        width: 916px;
+    }
+
+    @media (max-width: 932px) {
+        width: 458px;
+    }
+}
+
+.tag-container {
+    float: right; 
+    height: 45px; 
+    background-color: #fff; 
+    padding-right: 10px; 
+    color: #fff;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 4px;
+}
+
+.blue {
+    background-color: #47e;
+}
+
+.orange {
+    background-color: #ee9c44;
+}
+
+.green {
+    background-color: #60ca60;
+}
+
+.video-container {
+    display: inline-block;
+    text-decoration: initial;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    width: 454px; 
+    background-color: #fff;
+    text-shadow: 1px 1px #777;
+
+}
+
+.video-container:hover {
+    box-shadow: 1px 1px #000;
+}
+
+.video-info {
+    background-color: $primary-color; 
+    padding: 10px 15px;
+}
+
+.video-title {
+    font-size: 20px;
+    color: #eee; 
+    padding-top: 3px;
+    border-bottom: solid #fff 1px;
+    padding-bottom: 4px;
+}

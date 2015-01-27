@@ -1,0 +1,11 @@
+<div style="margin: 0 auto; width: 900px;">
+	<div>Name:<%= @video.title %></div>
+	<div>Tags <input id="tag-search" type="text"></div>
+	<ul>
+		<% @video.tags.each do |tag| %>
+			<li><%= tag.label %></li>
+		<% end %>
+	</ul>
+	<input id="video_id" type="hidden" value="<%= @video.id %>">
+	<a href="/">Back</a>
+</div>

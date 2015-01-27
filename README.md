@@ -1,8 +1,6 @@
 # ChewySearch
 An experiment integrating Elasticsearch with ActiveRecord using the chewy gem.
 
-After a bit of setup work Chewy works fairly well.
-
 The first major piece of code is the index file. The index takes fields from ActiveRecord and pushes them to Elasticsearch making them searchable. In this case we are making video titles searchable using the nGram search algorithm.
 ```ruby
 class VideoIndex < Chewy::Index
